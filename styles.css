@@ -1,0 +1,97 @@
+* { box-sizing: border-box; }
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background: #fff8f0;
+  color: #333;
+}
+.container {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px;
+}
+header {
+  background: linear-gradient(135deg, #ff7f50, #ffb347);
+  color: white;
+  padding: 25px;
+  border-radius: 16px;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.grid {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 20px;
+}
+.card {
+  background: white;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+}
+.menu-list {
+  display: grid;
+  gap: 12px;
+}
+.menu-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+  border: 1px solid #f0d8c2;
+  border-radius: 12px;
+  padding: 10px;
+  background: #fffdf8;
+}
+.item-info {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 1;
+}
+.item-info img {
+  width: 65px;
+  height: 65px;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.qty-box {
+  width: 60px;
+  padding: 6px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+form label {
+  display: block;
+  margin: 8px 0 4px;
+  font-weight: bold;
+}
+input[type="text"], input[type="tel"], textarea {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 8px;
+}
+textarea { min-height: 70px; resize: vertical; }
+button {
+  margin-top: 12px;
+  padding: 10px 16px;
+  border: none;
+  border-radius: 8px;
+  background: #ff7f50;
+  color: white;
+  cursor: pointer;
+  transition: 0.3s;
+}
+button:hover { background: #ff6a3d; transform: translateY(-2px); }
+.summary-box {
+  margin-top: 12px;
+  background: #fff4e8;
+  padding: 12px;
+  border-radius: 8px;
+}
+.error { color: red; margin-top: 8px; }
+.message { margin-top: 8px; color: green; font-weight: bold; }
+@media (max-width: 800px) {
+  .grid { grid-template-columns: 1fr; }
+}

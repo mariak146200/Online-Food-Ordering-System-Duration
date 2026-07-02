@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Online Food Order System</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <h1>Foodie Express</h1>
+      <p>Simple food ordering for your favorite meals.</p>
+    </header>
+
+    <div class="grid">
+      <section class="card">
+        <h2>Menu</h2>
+        <div class="menu-list">
+          <div class="menu-item">
+            <div class="item-info">
+              <img src="burger.jpg" alt="Burger" />
+              <div>
+                <strong>Burger</strong>
+                <div>120 Rs</div>
+              </div>
+            </div>
+            <div>
+              <label><input type="checkbox" class="item-checkbox" data-name="Burger" data-price="120"> Add</label>
+              <input type="number" class="qty-box" min="1" value="1" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-info">
+              <img src="pizza.jpg" alt="Pizza" />
+              <div>
+                <strong>Pizza</strong>
+                <div>250 Rs</div>
+              </div>
+            </div>
+            <div>
+              <label><input type="checkbox" class="item-checkbox" data-name="Pizza" data-price="250"> Add</label>
+              <input type="number" class="qty-box" min="1" value="1" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-info">
+              <img src="sandwich.jpg" alt="Sandwich" />
+              <div>
+                <strong>Sandwich</strong>
+                <div>90 Rs</div>
+              </div>
+            </div>
+            <div>
+              <label><input type="checkbox" class="item-checkbox" data-name="Sandwich" data-price="90"> Add</label>
+              <input type="number" class="qty-box" min="1" value="1" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-info">
+              <img src="fries.jpg" alt="Fries" />
+              <div>
+                <strong>Fries</strong>
+                <div>80 Rs</div>
+              </div>
+            </div>
+            <div>
+              <label><input type="checkbox" class="item-checkbox" data-name="Fries" data-price="80"> Add</label>
+              <input type="number" class="qty-box" min="1" value="1" />
+            </div>
+          </div>
+
+          <div class="menu-item">
+            <div class="item-info">
+              <img src="juice.jpg" alt="Juice" />
+              <div>
+                <strong>Juice</strong>
+                <div>60 Rs</div>
+              </div>
+            </div>
+            <div>
+              <label><input type="checkbox" class="item-checkbox" data-name="Juice" data-price="60"> Add</label>
+              <input type="number" class="qty-box" min="1" value="1" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section class="card">
+        <h2>Customer Details</h2>
+        <form id="orderForm">
+          <label for="name">Name</label>
+          <input type="text" id="name" placeholder="Enter your name" />
+
+          <label for="mobile">Mobile Number</label>
+          <input type="tel" id="mobile" placeholder="Enter mobile number" />
+
+          <label for="address">Address</label>
+          <textarea id="address" placeholder="Enter your address"></textarea>
+
+          <button type="submit">Place Order</button>
+          <div id="formError" class="error"></div>
+          <div id="thankYouMessage" class="message"></div>
+
+          <h3>Order Summary</h3>
+          <div id="summary" class="summary-box">No items selected yet.</div>
+        </form>
+      </section>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
